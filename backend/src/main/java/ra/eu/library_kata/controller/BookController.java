@@ -1,5 +1,6 @@
 package ra.eu.library_kata.controller;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import ra.eu.library_kata.dto.BookDto;
 import ra.eu.library_kata.service.BookService;
 
+@Tag(name = "Book")
 @RequiredArgsConstructor
 @Validated
 @RestController

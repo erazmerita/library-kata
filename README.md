@@ -7,3 +7,5 @@
      - JDBC URL = jdbc:h2:mem:library-kata
      - User Name = sa
      - Password = admin1234
+2. OpenAPI - provide a formal standard for describing HTTP APIs.
+   - URL to access in browser: http://localhost:8080/swagger-ui/index.html
