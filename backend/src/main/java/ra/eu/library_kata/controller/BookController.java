@@ -9,23 +9,23 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import ra.eu.library_kata.dto.UserDto;
-import ra.eu.library_kata.service.UserService;
+import ra.eu.library_kata.dto.BookDto;
+import ra.eu.library_kata.service.BookService;
 
 @RequiredArgsConstructor
 @Validated
 @RestController
-@RequestMapping("/api/v1/user")
-public class UserController {
+@RequestMapping("/api/v1/book")
+public class BookController {
 
-    private final UserService userService;
+    private final BookService bookService;
 
     @PostMapping("/create")
-    public ResponseEntity<Long> create(@Valid @RequestBody UserDto userDto) {
-        Long userId = userService.create(userDto);
+    public ResponseEntity<Long> create(@Valid @RequestBody BookDto bookDto) {
+        Long bookId = bookService.create(bookDto);
 
         return ResponseEntity
                 .status(HttpStatus.CREATED)
-                .body(userId);
+                .body(bookId);
     }
 }
